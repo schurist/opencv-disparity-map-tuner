@@ -58,7 +58,8 @@ private:
     cv::Mat right_image;
 
     // the object that holds the parameters for the block-matching algorithm
-    cv::StereoBM bmState;
+    cv::Ptr<cv::StereoBM> bmState;
+    //cv::StereoSGBM  bmState;
 
     void compute_depth_map();  // compute depth map with OpenCV
 
